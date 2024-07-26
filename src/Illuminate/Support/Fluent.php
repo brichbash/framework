@@ -8,6 +8,50 @@ use Illuminate\Contracts\Support\Jsonable;
 use JsonSerializable;
 
 /**
+ * @property null $column
+ * @property null $column
+ * @property null $algorithm
+ * @property null $algorithm
+ * @property null $algorithm
+ * @property null $columns
+ * @property null $columns
+ * @property null $index
+ * @property null $index
+ * @property null $index
+ * @property null $to
+ * @property null $from
+ * @property null $to
+ * @property null $length
+ * @property null $total
+ * @property null $places
+ * @property null $total
+ * @property null $places
+ * @property null $allowed
+ * @property null $precision
+ * @property null $precision
+ * @property null $precision
+ * @property null $precision
+ * @property null $precision
+ * @property null $precision
+ * @property null $precision
+ * @property null $useCurrent
+ * @property null $useCurrentOnUpdate
+ * @property null $precision
+ * @property null $precision
+ * @property null $charset
+ * @property null $collation
+ * @property null $virtualAs
+ * @property null $virtualAsJson
+ * @property null $storedAs
+ * @property null $storedAsJson
+ * @property null $nullable
+ * @property null $default
+ * @property null $onUpdate
+ * @property null $after
+ * @property null $comment
+ * @property null $comment
+ * @property int|null $srid
+ * @property int|null $srid
  * @template TKey of array-key
  * @template TValue
  *
@@ -16,6 +60,37 @@ use JsonSerializable;
  */
 class Fluent implements Arrayable, ArrayAccess, Jsonable, JsonSerializable
 {
+    public null $name;
+    public null $column;
+    public null $from;
+    public null $to;
+    public null $algorithm;
+    public null $columns;
+    public null $index;
+    public null $comment;
+    public null $length;
+    public null $total;
+    public null $places;
+    public null $allowed;
+    public null $precision;
+    public null $useCurrent;
+    public null $useCurrentOnUpdate;
+    public null $virtualAsJson;
+    public null $virtualAs;
+    public null $storedAsJson;
+    public null $storedAs;
+    public null $unsigned;
+    public null $charset;
+    public null $collation;
+    public null $nullable;
+    public null $invisible;
+    public null $default;
+    public null $onUpdate;
+    public null $type;
+    public null $autoIncrement;
+    public null $first;
+    public null $after;
+    public null $srid;
     /**
      * All of the attributes set on the fluent instance.
      *

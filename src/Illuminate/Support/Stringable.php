@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Traits\Conditionable;
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Support\Traits\Tappable;
+use JetBrains\PhpStorm\NoReturn;
 use JsonSerializable;
 use Symfony\Component\VarDumper\VarDumper;
 
@@ -1141,7 +1142,7 @@ class Stringable implements JsonSerializable, ArrayAccess
      *
      * @return never
      */
-    public function dd()
+    #[NoReturn] public function dd()
     {
         $this->dump();
 

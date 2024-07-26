@@ -101,7 +101,7 @@ class Pluralizer
     /**
      * Get the inflector instance.
      *
-     * @return \Doctrine\Inflector\Inflector
+     * @return \Doctrine\Inflector\Inflector|Pluralizer
      */
     public static function inflector()
     {

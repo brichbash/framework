@@ -3,6 +3,7 @@
 namespace Illuminate\Queue;
 
 use Closure;
+use JetBrains\PhpStorm\NoReturn;
 use Symfony\Component\Process\PhpExecutableFinder;
 use Symfony\Component\Process\Process;
 
@@ -218,7 +219,7 @@ class Listener
      *
      * @return void
      */
-    public function stop()
+    #[NoReturn] public function stop()
     {
         exit;
     }

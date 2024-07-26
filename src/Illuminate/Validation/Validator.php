@@ -1021,7 +1021,7 @@ class Validator implements ValidatorContract
      *
      * @param  string  $attribute
      * @param  string|array  $rules
-     * @return array|null
+     * @return array|void|null
      */
     protected function getRule($attribute, $rules)
     {

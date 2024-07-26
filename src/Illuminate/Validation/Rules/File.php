@@ -96,7 +96,7 @@ class File implements Rule, DataAwareRule, ValidatorAwareRule
     /**
      * Get the default configuration of the file rule.
      *
-     * @return static
+     * @return callable|Rule|File
      */
     public static function default()
     {

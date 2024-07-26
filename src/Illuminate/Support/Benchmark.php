@@ -3,6 +3,7 @@
 namespace Illuminate\Support;
 
 use Closure;
+use JetBrains\PhpStorm\NoReturn;
 
 class Benchmark
 {
@@ -39,7 +40,7 @@ class Benchmark
      * @param  int  $iterations
      * @return never
      */
-    public static function dd(Closure|array $benchmarkables, int $iterations = 1): void
+    #[NoReturn] public static function dd(Closure|array $benchmarkables, int $iterations = 1): void
     {
         $result = collect(static::measure(Arr::wrap($benchmarkables), $iterations))
             ->map(fn ($average) => number_format($average, 3).'ms')

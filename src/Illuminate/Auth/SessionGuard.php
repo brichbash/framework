@@ -136,7 +136,7 @@ class SessionGuard implements StatefulGuard, SupportsBasicAuth
     /**
      * Get the currently authenticated user.
      *
-     * @return \Illuminate\Contracts\Auth\Authenticatable|null
+     * @return AuthenticatableContract|void|null
      */
     public function user()
     {
@@ -203,7 +203,7 @@ class SessionGuard implements StatefulGuard, SupportsBasicAuth
     /**
      * Get the decrypted recaller cookie for the request.
      *
-     * @return \Illuminate\Auth\Recaller|null
+     * @return Recaller|void|null
      */
     protected function recaller()
     {
@@ -286,7 +286,7 @@ class SessionGuard implements StatefulGuard, SupportsBasicAuth
      *
      * @param  string  $field
      * @param  array  $extraConditions
-     * @return \Symfony\Component\HttpFoundation\Response|null
+     * @return void
      *
      * @throws \Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException
      */
@@ -657,7 +657,7 @@ class SessionGuard implements StatefulGuard, SupportsBasicAuth
      *
      * @param  string  $password
      * @param  string  $attribute
-     * @return \Illuminate\Contracts\Auth\Authenticatable|null
+     * @return AuthenticatableContract|void|null
      *
      * @throws \Illuminate\Auth\AuthenticationException
      */
@@ -914,7 +914,7 @@ class SessionGuard implements StatefulGuard, SupportsBasicAuth
      * Set the current user.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
-     * @return void
+     * @return SessionGuard|void
      */
     public function setUser(AuthenticatableContract $user)
     {

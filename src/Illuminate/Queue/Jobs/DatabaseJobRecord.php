@@ -4,9 +4,13 @@ namespace Illuminate\Queue\Jobs;
 
 use Illuminate\Support\InteractsWithTime;
 
-class DatabaseJobRecord
+class DatabaseJobRecord extends \stdClass
 {
     use InteractsWithTime;
+
+    public mixed $payload;
+    public mixed $attempts;
+    public mixed $id;
 
     /**
      * The underlying job record.

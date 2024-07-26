@@ -796,7 +796,7 @@ class PendingRequest
      * @param  string  $method
      * @param  string  $url
      * @param  array  $options
-     * @return \Illuminate\Http\Client\Response
+     * @return \GuzzleHttp\Promise\PromiseInterface|Response
      *
      * @throws \Exception
      */

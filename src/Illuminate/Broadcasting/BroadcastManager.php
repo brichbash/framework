@@ -435,7 +435,7 @@ class BroadcastManager implements FactoryContract
     /**
      * Get the application instance used by the manager.
      *
-     * @return \Illuminate\Contracts\Foundation\Application
+     * @return \Illuminate\Contracts\Container\Container|\Illuminate\Contracts\Foundation\Application
      */
     public function getApplication()
     {

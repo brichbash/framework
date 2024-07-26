@@ -21,6 +21,7 @@ use Illuminate\Support\ViewErrorBag;
 use Illuminate\Testing\Assert as PHPUnit;
 use Illuminate\Testing\Constraints\SeeInOrder;
 use Illuminate\Testing\Fluent\AssertableJson;
+use JetBrains\PhpStorm\NoReturn;
 use LogicException;
 use PHPUnit\Framework\ExpectationFailedException;
 use ReflectionProperty;
@@ -1428,7 +1429,7 @@ class TestResponse implements ArrayAccess
      *
      * @return never
      */
-    public function dd()
+    #[NoReturn] public function dd()
     {
         $this->dump();
 
@@ -1440,7 +1441,7 @@ class TestResponse implements ArrayAccess
      *
      * @return never
      */
-    public function ddHeaders()
+    #[NoReturn] public function ddHeaders()
     {
         $this->dumpHeaders();
 
@@ -1453,7 +1454,7 @@ class TestResponse implements ArrayAccess
      * @param  string|array  $keys
      * @return never
      */
-    public function ddSession($keys = [])
+    #[NoReturn] public function ddSession($keys = [])
     {
         $this->dumpSession($keys);
 
@@ -1656,8 +1657,6 @@ class TestResponse implements ArrayAccess
     protected function appendMessageToException($message, $exception)
     {
         $property = new ReflectionProperty($exception, 'message');
-
-        $property->setAccessible(true);
 
         $property->setValue(
             $exception,

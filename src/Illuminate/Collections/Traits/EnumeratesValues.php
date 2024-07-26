@@ -11,6 +11,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Enumerable;
 use Illuminate\Support\HigherOrderCollectionProxy;
+use JetBrains\PhpStorm\NoReturn;
 use JsonSerializable;
 use Symfony\Component\VarDumper\VarDumper;
 use Traversable;
@@ -200,7 +201,7 @@ trait EnumeratesValues
      * @param  mixed  ...$args
      * @return never
      */
-    public function dd(...$args)
+    #[NoReturn] public function dd(...$args)
     {
         $this->dump(...$args);
 

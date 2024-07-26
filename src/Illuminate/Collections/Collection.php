@@ -97,7 +97,7 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
      * Get the median of a given key.
      *
      * @param  string|array<array-key, string>|null  $key
-     * @return float|int|null
+     * @return float|int|void|null
      */
     public function median($key = null)
     {
@@ -126,7 +126,7 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
      * Get the mode of a given key.
      *
      * @param  string|array<array-key, string>|null  $key
-     * @return array<int, float|int>|null
+     * @return float[]|int[]|void|null
      */
     public function mode($key = null)
     {
@@ -478,7 +478,7 @@ class Collection implements ArrayAccess, CanBeEscapedWhenCastToString, Enumerabl
      *
      * @param  (callable(TValue, TKey): array-key)|array|string  $groupBy
      * @param  bool  $preserveKeys
-     * @return static<array-key, static<array-key, TValue>>
+     * @return Collection|HigherOrderCollectionProxy
      */
     public function groupBy($groupBy, $preserveKeys = false)
     {

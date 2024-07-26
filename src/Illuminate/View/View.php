@@ -216,7 +216,7 @@ class View implements ArrayAccess, Htmlable, ViewContract
     /**
      * Get the sections of the rendered view.
      *
-     * @return array
+     * @return array|string
      *
      * @throws \Throwable
      */

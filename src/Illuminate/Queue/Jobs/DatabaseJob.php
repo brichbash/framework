@@ -99,7 +99,7 @@ class DatabaseJob extends Job implements JobContract
     /**
      * Get the database job record.
      *
-     * @return \Illuminate\Queue\Jobs\DatabaseJobRecord
+     * @return DatabaseJobRecord|\stdClass
      */
     public function getJobRecord()
     {

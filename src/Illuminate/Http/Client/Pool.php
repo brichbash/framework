@@ -61,7 +61,7 @@ class Pool
     /**
      * Retrieve a new async pending request.
      *
-     * @return \Illuminate\Http\Client\PendingRequest
+     * @return Factory|PendingRequest
      */
     protected function asyncRequest()
     {

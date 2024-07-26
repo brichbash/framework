@@ -39,7 +39,7 @@ class ModelMakeCommand extends GeneratorCommand
     /**
      * Execute the console command.
      *
-     * @return void
+     * @return false|void
      */
     public function handle()
     {

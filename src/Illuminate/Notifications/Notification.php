@@ -21,6 +21,9 @@ class Notification
      * @var string|null
      */
     public $locale;
+    public $connection;
+    public $queue;
+    public $delay;
 
     /**
      * Get the channels the event should broadcast on.

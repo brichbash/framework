@@ -115,7 +115,7 @@ class DynamoDbFailedJobProvider implements FailedJobProviderInterface
      * Get a single failed job.
      *
      * @param  mixed  $id
-     * @return object|null
+     * @return object|void|null
      */
     public function find($id)
     {

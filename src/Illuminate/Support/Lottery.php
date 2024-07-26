@@ -133,7 +133,7 @@ class Lottery
      * Run the winner or loser callback, randomly.
      *
      * @param  mixed  ...$args
-     * @return callable
+     * @return callable|true
      */
     protected function runCallback(...$args)
     {

@@ -6,6 +6,7 @@ use Dotenv\Dotenv;
 use Dotenv\Exception\InvalidFileException;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\Env;
+use JetBrains\PhpStorm\NoReturn;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
@@ -96,7 +97,7 @@ class LoadEnvironmentVariables
      * @param  \Dotenv\Exception\InvalidFileException  $e
      * @return void
      */
-    protected function writeErrorAndDie(InvalidFileException $e)
+    #[NoReturn] protected function writeErrorAndDie(InvalidFileException $e)
     {
         $output = (new ConsoleOutput)->getErrorOutput();
 

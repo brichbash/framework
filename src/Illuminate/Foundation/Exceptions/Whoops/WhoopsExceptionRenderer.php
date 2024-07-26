@@ -28,7 +28,7 @@ class WhoopsExceptionRenderer implements ExceptionRenderer
     /**
      * Get the Whoops handler for the application.
      *
-     * @return \Whoops\Handler\Handler
+     * @return \Whoops\Handler\Handler|\Whoops\Handler\PrettyPageHandler
      */
     protected function whoopsHandler()
     {

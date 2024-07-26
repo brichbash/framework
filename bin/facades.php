@@ -184,9 +184,9 @@ function resolveDocParamType($method, $parameter)
 }
 
 /**
- * Resolve the return type from the @return docblock.
+ * Resolve the return type from the @param \ReflectionMethodDecorator  $method
+ * @return docblock|string
  *
- * @param  \ReflectionMethodDecorator  $method
  * @return string|null
  */
 function resolveReturnDocType($method)

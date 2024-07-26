@@ -95,7 +95,7 @@ class DatabaseUserProvider implements UserProvider
      * Retrieve a user by the given credentials.
      *
      * @param  array  $credentials
-     * @return \Illuminate\Contracts\Auth\Authenticatable|null
+     * @return UserContract|void|null
      */
     public function retrieveByCredentials(array $credentials)
     {

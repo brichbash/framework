@@ -182,7 +182,7 @@ class ThrottleRequests
      * @param  string  $key
      * @param  int  $maxAttempts
      * @param  callable|null  $responseCallback
-     * @return \Illuminate\Http\Exceptions\ThrottleRequestsException
+     * @return HttpResponseException|ThrottleRequestsException
      */
     protected function buildException($request, $key, $maxAttempts, $responseCallback = null)
     {

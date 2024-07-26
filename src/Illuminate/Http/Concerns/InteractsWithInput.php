@@ -5,6 +5,7 @@ namespace Illuminate\Http\Concerns;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Date;
+use JetBrains\PhpStorm\NoReturn;
 use SplFileInfo;
 use stdClass;
 use Symfony\Component\HttpFoundation\InputBag;
@@ -612,7 +613,7 @@ trait InteractsWithInput
      * @param  mixed  ...$keys
      * @return never
      */
-    public function dd(...$keys)
+    #[NoReturn] public function dd(...$keys)
     {
         $this->dump(...$keys);
 

@@ -107,7 +107,7 @@ trait BroadcastsEvents
      * @param  mixed  $instance
      * @param  string  $event
      * @param  mixed  $channels
-     * @return \Illuminate\Broadcasting\PendingBroadcast|null
+     * @return \Illuminate\Broadcasting\PendingBroadcast|void|null
      */
     protected function broadcastIfBroadcastChannelsExistForEvent($instance, $event, $channels = null)
     {

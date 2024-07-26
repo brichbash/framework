@@ -102,7 +102,7 @@ class ClearCommand extends Command
     /**
      * Get the cache instance for the command.
      *
-     * @return \Illuminate\Cache\Repository
+     * @return \Illuminate\Cache\Repository|\Illuminate\Contracts\Cache\Repository
      */
     protected function cache()
     {

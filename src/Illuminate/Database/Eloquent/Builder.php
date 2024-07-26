@@ -1202,9 +1202,10 @@ class Builder implements BuilderContract
     /**
      * Delete records from the database.
      *
+     * @param null $id
      * @return mixed
      */
-    public function delete()
+    public function delete($id = null)
     {
         if (isset($this->onDelete)) {
             return call_user_func($this->onDelete, $this);
@@ -1947,7 +1948,6 @@ class Builder implements BuilderContract
 
         foreach ($methods as $method) {
             if ($replace || ! static::hasGlobalMacro($method->name)) {
-                $method->setAccessible(true);
 
                 static::macro($method->name, $method->invoke($mixin));
             }

@@ -5,7 +5,7 @@ namespace Illuminate\Database\Query;
 use Illuminate\Contracts\Database\Query\Expression as ExpressionContract;
 use Illuminate\Database\Grammar;
 
-class Expression implements ExpressionContract
+class Expression extends \Illuminate\Database\Eloquent\Builder implements ExpressionContract
 {
     /**
      * The value of the expression.

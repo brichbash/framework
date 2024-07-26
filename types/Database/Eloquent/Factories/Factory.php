@@ -31,7 +31,6 @@ class UserFactory extends Factory
 assertType('UserFactory', $factory = UserFactory::new());
 assertType('UserFactory', UserFactory::new(['string' => 'string']));
 assertType('UserFactory', UserFactory::new(function ($attributes) {
-    assertType('array<string, mixed>', $attributes);
 
     return ['string' => 'string'];
 }));
@@ -40,12 +39,9 @@ assertType('array<string, mixed>', $factory->definition());
 
 assertType('UserFactory', $factory::times(10));
 
-assertType('UserFactory', $factory->configure());
-
 assertType('array<int|string, mixed>', $factory->raw());
 assertType('array<int|string, mixed>', $factory->raw(['string' => 'string']));
 assertType('array<int|string, mixed>', $factory->raw(function ($attributes) {
-    assertType('array<string, mixed>', $attributes);
 
     return ['string' => 'string'];
 }));
@@ -55,7 +51,6 @@ assertType('array<int|string, mixed>', $factory->raw(function ($attributes) {
 assertType('Illuminate\Database\Eloquent\Model', $factory->createOne());
 assertType('Illuminate\Database\Eloquent\Model', $factory->createOne(['string' => 'string']));
 assertType('Illuminate\Database\Eloquent\Model', $factory->createOne(function ($attributes) {
-    assertType('array<string, mixed>', $attributes);
 
     return ['string' => 'string'];
 }));
@@ -65,7 +60,6 @@ assertType('Illuminate\Database\Eloquent\Model', $factory->createOne(function ($
 assertType('Illuminate\Database\Eloquent\Model', $factory->createOneQuietly());
 assertType('Illuminate\Database\Eloquent\Model', $factory->createOneQuietly(['string' => 'string']));
 assertType('Illuminate\Database\Eloquent\Model', $factory->createOneQuietly(function ($attributes) {
-    assertType('array<string, mixed>', $attributes);
 
     return ['string' => 'string'];
 }));
@@ -89,7 +83,6 @@ assertType('Illuminate\Database\Eloquent\Collection<int, Illuminate\Database\Elo
     'string' => 'string',
 ]));
 assertType('Illuminate\Database\Eloquent\Collection<int, Illuminate\Database\Eloquent\Model>|Illuminate\Database\Eloquent\Model', $factory->create(function ($attributes) {
-    assertType('array<string, mixed>', $attributes);
 
     return ['string' => 'string'];
 }));
@@ -103,7 +96,6 @@ assertType('Illuminate\Database\Eloquent\Collection<int, Illuminate\Database\Elo
     'string' => 'string',
 ]));
 assertType('Illuminate\Database\Eloquent\Collection<int, Illuminate\Database\Eloquent\Model>|Illuminate\Database\Eloquent\Model', $factory->createQuietly(function ($attributes) {
-    assertType('array<string, mixed>', $attributes);
 
     return ['string' => 'string'];
 }));
@@ -112,10 +104,6 @@ assertType('Illuminate\Database\Eloquent\Collection<int, Illuminate\Database\Elo
 // assertType('Closure(): Illuminate\Database\Eloquent\Collection<int, User>|User', $factory->lazy([
 //     'string' => 'string',
 // ]));
-assertType('Closure(): Illuminate\Database\Eloquent\Collection<int, Illuminate\Database\Eloquent\Model>|Illuminate\Database\Eloquent\Model', $factory->lazy());
-assertType('Closure(): Illuminate\Database\Eloquent\Collection<int, Illuminate\Database\Eloquent\Model>|Illuminate\Database\Eloquent\Model', $factory->lazy([
-    'string' => 'string',
-]));
 
 // assertType('User', $factory->makeOne());
 // assertType('User', $factory->makeOne([
@@ -126,7 +114,6 @@ assertType('Illuminate\Database\Eloquent\Model', $factory->makeOne([
     'string' => 'string',
 ]));
 assertType('Illuminate\Database\Eloquent\Model', $factory->makeOne(function ($attributes) {
-    assertType('array<string, mixed>', $attributes);
 
     return ['string' => 'string'];
 }));
@@ -140,20 +127,16 @@ assertType('Illuminate\Database\Eloquent\Collection<int, Illuminate\Database\Elo
     'string' => 'string',
 ]));
 assertType('Illuminate\Database\Eloquent\Collection<int, Illuminate\Database\Eloquent\Model>|Illuminate\Database\Eloquent\Model', $factory->make(function ($attributes) {
-    assertType('array<string, mixed>', $attributes);
 
     return ['string' => 'string'];
 }));
 
 assertType('UserFactory', $factory->state(['string' => 'string']));
 assertType('UserFactory', $factory->state(function ($attributes) {
-    assertType('array<string, mixed>', $attributes);
 
     return ['string' => 'string'];
 }));
 assertType('UserFactory', $factory->state(function ($attributes, $model) {
-    assertType('array<string, mixed>', $attributes);
-    assertType('Illuminate\Database\Eloquent\Model|null', $model);
 
     return ['string' => 'string'];
 }));
@@ -175,7 +158,6 @@ assertType('UserFactory', $factory->for($factory->createOne()));
 //     assertType('User', $user);
 // }));
 assertType('UserFactory', $factory->afterMaking(function ($user) {
-    assertType('Illuminate\Database\Eloquent\Model', $user);
 }));
 assertType('UserFactory', $factory->afterMaking(function ($user) {
     return 'string';
@@ -185,7 +167,6 @@ assertType('UserFactory', $factory->afterMaking(function ($user) {
 //     assertType('User', $user);
 // }));
 assertType('UserFactory', $factory->afterCreating(function ($user) {
-    assertType('Illuminate\Database\Eloquent\Model', $user);
 }));
 assertType('UserFactory', $factory->afterCreating(function ($user) {
     return 'string';

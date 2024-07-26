@@ -38,7 +38,7 @@ class PusherBroadcaster extends Broadcaster
      * See: https://pusher.com/docs/channels/server_api/authenticating-users/#response
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return array|null
+     * @return array|void|null
      */
     public function resolveAuthenticatedUser($request)
     {
@@ -126,7 +126,7 @@ class PusherBroadcaster extends Broadcaster
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  mixed  $response
-     * @return array
+     * @return array|\Illuminate\Http\JsonResponse
      */
     protected function decodePusherResponse($request, $response)
     {

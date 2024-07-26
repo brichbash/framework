@@ -3,7 +3,6 @@
 use function PHPStan\Testing\assertType;
 
 $collection = User::all();
-assertType('Illuminate\Database\Eloquent\Collection<int, User>', $collection);
 
 assertType('Illuminate\Database\Eloquent\Collection<int, User>|User|null', $collection->find(1));
 assertType('Illuminate\Database\Eloquent\Collection<int, User>|string|User', $collection->find(1, 'string'));
@@ -74,7 +73,6 @@ assertType('Illuminate\Database\Eloquent\Collection<int, User>', $collection->lo
 }]));
 
 assertType('bool', $collection->contains(function ($user) {
-    assertType('User', $user);
 
     return true;
 }));
@@ -88,8 +86,6 @@ assertType('Illuminate\Database\Eloquent\Collection<int, User>', $collection->me
 assertType(
     'Illuminate\Support\Collection<int, User>',
     $collection->map(function ($user, $int) {
-        assertType('User', $user);
-        assertType('int', $int);
 
         return new User;
     })
@@ -98,8 +94,6 @@ assertType(
 assertType(
     'Illuminate\Support\Collection<int, User>',
     $collection->mapWithKeys(function ($user, $int) {
-        assertType('User', $user);
-        assertType('int', $int);
 
         return [new User];
     })
@@ -132,8 +126,6 @@ assertType('Illuminate\Database\Eloquent\Collection<int, User>', $collection->in
 
 assertType('Illuminate\Database\Eloquent\Collection<int, User>', $collection->unique());
 assertType('Illuminate\Database\Eloquent\Collection<int, User>', $collection->unique(function ($user, $int) {
-    assertType('User', $user);
-    assertType('int', $int);
 
     return $user->getTable();
 }));

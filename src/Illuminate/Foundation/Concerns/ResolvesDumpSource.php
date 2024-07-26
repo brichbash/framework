@@ -49,7 +49,7 @@ trait ResolvesDumpSource
     /**
      * Resolve the source of the dump call.
      *
-     * @return array{0: string, 1: string, 2: int|null}|null
+     * @return void
      */
     public function resolveDumpSource()
     {

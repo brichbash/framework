@@ -2,7 +2,7 @@
 
 namespace Illuminate\Database\Events;
 
-class NoPendingMigrations
+class NoPendingMigrations implements \Illuminate\Contracts\Database\Events\MigrationEvent, \Illuminate\Contracts\Database\Events\MigrationEvent
 {
     /**
      * The migration method that was called.

@@ -19,6 +19,17 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
  * @method array validate(array $rules, ...$params)
  * @method array validateWithBag(string $errorBag, array $rules, ...$params)
  * @method bool hasValidSignature(bool $absolute = true)
+ * @property mixed $socket_id
+ * @property mixed $channel_name
+ * @property mixed $channel_name
+ * @property mixed $socket_id
+ * @property mixed $channel_name
+ * @property mixed $socket_id
+ * @property mixed $channel_name
+ * @property mixed $channel_name
+ * @property mixed $socket_id
+ * @property mixed $channel_name
+ * @property mixed $socket_id
  */
 class Request extends SymfonyRequest implements Arrayable, ArrayAccess
 {
@@ -27,6 +38,10 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
         Concerns\InteractsWithFlashData,
         Concerns\InteractsWithInput,
         Macroable;
+
+    public mixed $socket_id;
+    public mixed $channel_name;
+    public mixed $callback;
 
     /**
      * The decoded JSON content for the request.
@@ -549,7 +564,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     /**
      * Get the session associated with the request.
      *
-     * @return \Illuminate\Contracts\Session\Session
+     * @return callable|\Illuminate\Contracts\Session\Session|SessionInterface
      *
      * @throws \RuntimeException
      */

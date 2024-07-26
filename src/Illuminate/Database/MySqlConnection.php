@@ -26,7 +26,7 @@ class MySqlConnection extends Connection
     /**
      * Get the default query grammar instance.
      *
-     * @return \Illuminate\Database\Query\Grammars\MySqlGrammar
+     * @return Grammar|QueryGrammar
      */
     protected function getDefaultQueryGrammar()
     {
@@ -50,7 +50,7 @@ class MySqlConnection extends Connection
     /**
      * Get the default schema grammar instance.
      *
-     * @return \Illuminate\Database\Schema\Grammars\MySqlGrammar
+     * @return Grammar|SchemaGrammar
      */
     protected function getDefaultSchemaGrammar()
     {

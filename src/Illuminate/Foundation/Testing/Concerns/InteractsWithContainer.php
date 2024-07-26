@@ -55,7 +55,7 @@ trait InteractsWithContainer
      *
      * @param  string  $abstract
      * @param  \Closure|null  $mock
-     * @return \Mockery\MockInterface
+     * @return Mockery\MockInterface|object
      */
     protected function mock($abstract, Closure $mock = null)
     {
@@ -67,7 +67,7 @@ trait InteractsWithContainer
      *
      * @param  string  $abstract
      * @param  \Closure|null  $mock
-     * @return \Mockery\MockInterface
+     * @return Mockery\MockInterface|object
      */
     protected function partialMock($abstract, Closure $mock = null)
     {
@@ -79,7 +79,7 @@ trait InteractsWithContainer
      *
      * @param  string  $abstract
      * @param  \Closure|null  $mock
-     * @return \Mockery\MockInterface
+     * @return Mockery\MockInterface|object
      */
     protected function spy($abstract, Closure $mock = null)
     {

@@ -547,7 +547,7 @@ class Blueprint
      * @param  string|array  $columns
      * @param  string|null  $name
      * @param  string|null  $algorithm
-     * @return \Illuminate\Database\Schema\IndexDefinition
+     * @return IndexDefinition|Fluent
      */
     public function primary($columns, $name = null, $algorithm = null)
     {
@@ -560,7 +560,7 @@ class Blueprint
      * @param  string|array  $columns
      * @param  string|null  $name
      * @param  string|null  $algorithm
-     * @return \Illuminate\Database\Schema\IndexDefinition
+     * @return IndexDefinition|Fluent
      */
     public function unique($columns, $name = null, $algorithm = null)
     {
@@ -573,7 +573,7 @@ class Blueprint
      * @param  string|array  $columns
      * @param  string|null  $name
      * @param  string|null  $algorithm
-     * @return \Illuminate\Database\Schema\IndexDefinition
+     * @return IndexDefinition|Fluent
      */
     public function index($columns, $name = null, $algorithm = null)
     {
@@ -586,7 +586,7 @@ class Blueprint
      * @param  string|array  $columns
      * @param  string|null  $name
      * @param  string|null  $algorithm
-     * @return \Illuminate\Database\Schema\IndexDefinition
+     * @return IndexDefinition|Fluent
      */
     public function fullText($columns, $name = null, $algorithm = null)
     {
@@ -598,7 +598,7 @@ class Blueprint
      *
      * @param  string|array  $columns
      * @param  string|null  $name
-     * @return \Illuminate\Database\Schema\IndexDefinition
+     * @return IndexDefinition|Fluent
      */
     public function spatialIndex($columns, $name = null)
     {
@@ -913,7 +913,7 @@ class Blueprint
      * Create a new unsigned big integer (8-byte) column on the table.
      *
      * @param  string  $column
-     * @return \Illuminate\Database\Schema\ForeignIdColumnDefinition
+     * @return ColumnDefinition|ForeignIdColumnDefinition
      */
     public function foreignId($column)
     {
@@ -1289,7 +1289,7 @@ class Blueprint
      * Create a new UUID column on the table with a foreign key constraint.
      *
      * @param  string  $column
-     * @return \Illuminate\Database\Schema\ForeignIdColumnDefinition
+     * @return ColumnDefinition|ForeignIdColumnDefinition
      */
     public function foreignUuid($column)
     {
@@ -1316,7 +1316,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  int|null  $length
-     * @return \Illuminate\Database\Schema\ForeignIdColumnDefinition
+     * @return ColumnDefinition|ForeignIdColumnDefinition
      */
     public function foreignUlid($column, $length = 26)
     {

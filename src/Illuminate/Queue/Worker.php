@@ -16,6 +16,7 @@ use Illuminate\Queue\Events\JobReleasedAfterException;
 use Illuminate\Queue\Events\Looping;
 use Illuminate\Queue\Events\WorkerStopping;
 use Illuminate\Support\Carbon;
+use JetBrains\PhpStorm\NoReturn;
 use Throwable;
 
 class Worker
@@ -758,7 +759,7 @@ class Worker
      * @param  \Illuminate\Queue\WorkerOptions|null  $options
      * @return never
      */
-    public function kill($status = 0, $options = null)
+    #[NoReturn] public function kill($status = 0, $options = null)
     {
         $this->events->dispatch(new WorkerStopping($status, $options));
 

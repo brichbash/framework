@@ -7,7 +7,7 @@ use Illuminate\Queue\Events\JobFailed;
 use Illuminate\Queue\ManuallyFailedException;
 use Illuminate\Support\InteractsWithTime;
 
-abstract class Job
+abstract class Job implements \Illuminate\Contracts\Queue\Job
 {
     use InteractsWithTime;
 

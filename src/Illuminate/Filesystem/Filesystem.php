@@ -289,15 +289,11 @@ class Filesystem
         $success = true;
 
         foreach ($paths as $path) {
-            try {
-                if (@unlink($path)) {
+            if (@unlink($path)) {
                     clearstatcache(false, $path);
                 } else {
                     $success = false;
-                }
-            } catch (ErrorException) {
-                $success = false;
-            }
+
         }
 
         return $success;
@@ -332,7 +328,7 @@ class Filesystem
      *
      * @param  string  $target
      * @param  string  $link
-     * @return void
+     * @return bool|void
      */
     public function link($target, $link)
     {

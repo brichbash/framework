@@ -26,7 +26,7 @@ trait Batchable
     /**
      * Get the batch instance for the job, if applicable.
      *
-     * @return \Illuminate\Bus\Batch|null
+     * @return Batch|\Illuminate\Support\Testing\BatchFake|null
      */
     public function batch()
     {

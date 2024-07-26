@@ -7,6 +7,7 @@ namespace Illuminate\Support;
  */
 class HigherOrderCollectionProxy
 {
+    public mixed $chained;
     /**
      * The collection being operated on.
      *

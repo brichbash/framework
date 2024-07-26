@@ -24,6 +24,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Traits\ForwardsCalls;
 use Illuminate\Support\Traits\Macroable;
 use InvalidArgumentException;
+use JetBrains\PhpStorm\NoReturn;
 use LogicException;
 use RuntimeException;
 
@@ -3871,7 +3872,7 @@ class Builder implements BuilderContract
      *
      * @return never
      */
-    public function dd()
+    #[NoReturn] public function dd()
     {
         dd($this->toSql(), $this->getBindings());
     }

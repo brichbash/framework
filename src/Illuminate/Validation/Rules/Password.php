@@ -135,7 +135,7 @@ class Password implements Rule, DataAwareRule, ValidatorAwareRule
     /**
      * Get the default configuration of the password rule.
      *
-     * @return static
+     * @return callable|Rule|Password
      */
     public static function default()
     {

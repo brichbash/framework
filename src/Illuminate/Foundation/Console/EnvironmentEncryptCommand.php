@@ -53,7 +53,7 @@ class EnvironmentEncryptCommand extends Command
     /**
      * Execute the console command.
      *
-     * @return void
+     * @return int|void
      */
     public function handle()
     {

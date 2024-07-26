@@ -86,7 +86,7 @@ trait GuardHelpers
      * Set the current user.
      *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
-     * @return void
+     * @return RequestGuard|SessionGuard|TokenGuard|void
      */
     public function setUser(AuthenticatableContract $user)
     {

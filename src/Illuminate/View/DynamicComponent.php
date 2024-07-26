@@ -43,7 +43,7 @@ class DynamicComponent extends Component
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\Contracts\View\View|string
+     * @return \Closure|\Illuminate\Contracts\View\View|string
      */
     public function render()
     {
@@ -155,7 +155,7 @@ EOF;
     /**
      * Get an instance of the Blade tag compiler.
      *
-     * @return \Illuminate\View\Compilers\ComponentTagCompiler
+     * @return Compilers\BladeTagCompiler|ComponentTagCompiler
      */
     protected function compiler()
     {

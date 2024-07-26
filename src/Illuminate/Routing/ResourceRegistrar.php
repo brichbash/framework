@@ -76,7 +76,7 @@ class ResourceRegistrar
      * @param  string  $name
      * @param  string  $controller
      * @param  array  $options
-     * @return \Illuminate\Routing\RouteCollection
+     * @return RouteCollection|void
      */
     public function register($name, $controller, array $options = [])
     {
@@ -130,7 +130,7 @@ class ResourceRegistrar
      * @param  string  $name
      * @param  string  $controller
      * @param  array  $options
-     * @return \Illuminate\Routing\RouteCollection
+     * @return RouteCollection|void
      */
     public function singleton($name, $controller, array $options = [])
     {
@@ -174,7 +174,7 @@ class ResourceRegistrar
      * @param  string  $name
      * @param  string  $controller
      * @param  array  $options
-     * @return void
+     * @return Router|void
      */
     protected function prefixedResource($name, $controller, array $options)
     {
@@ -196,7 +196,7 @@ class ResourceRegistrar
      * @param  string  $name
      * @param  string  $controller
      * @param  array  $options
-     * @return void
+     * @return Router|void
      */
     protected function prefixedSingleton($name, $controller, array $options)
     {

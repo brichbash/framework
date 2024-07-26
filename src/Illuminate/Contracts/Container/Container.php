@@ -5,7 +5,7 @@ namespace Illuminate\Contracts\Container;
 use Closure;
 use Psr\Container\ContainerInterface;
 
-interface Container extends ContainerInterface
+interface Container extends ContainerInterface, \Illuminate\Contracts\Foundation\Application, \Illuminate\Contracts\Foundation\Application
 {
     /**
      * Determine if the given abstract type has been bound.

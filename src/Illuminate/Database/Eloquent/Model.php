@@ -1378,7 +1378,7 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
     /**
      * Delete the model from the database.
      *
-     * @return bool|null
+     * @return bool|void|null
      *
      * @throws \LogicException
      */
@@ -1671,7 +1671,7 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
      * Reload a fresh model instance from the database.
      *
      * @param  array|string  $with
-     * @return static|null
+     * @return Model|void|null
      */
     public function fresh($with = [])
     {
@@ -1813,7 +1813,7 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
      * Resolve a connection instance.
      *
      * @param  string|null  $connection
-     * @return \Illuminate\Database\Connection
+     * @return \Illuminate\Database\Connection|\Illuminate\Database\ConnectionInterface
      */
     public static function resolveConnection($connection = null)
     {

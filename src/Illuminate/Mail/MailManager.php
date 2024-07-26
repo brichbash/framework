@@ -257,7 +257,7 @@ class MailManager implements FactoryContract
      * Create an instance of the Symfony Amazon SES V2 Transport driver.
      *
      * @param  array  $config
-     * @return \Illuminate\Mail\Transport\Se2VwTransport
+     * @return Transport\Se2VwTransport|SesV2Transport
      */
     protected function createSesV2Transport(array $config)
     {

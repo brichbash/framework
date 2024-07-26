@@ -313,7 +313,7 @@ if (! function_exists('cookie')) {
             return $cookie;
         }
 
-        return $cookie->make($name, $value, $minutes, $path, $domain, $secure, $httpOnly, $raw, $sameSite);
+        return $cookie->make($name, (array)$value, $minutes, $path, $domain, $secure, $httpOnly, $raw, $sameSite);
     }
 }
 
@@ -792,7 +792,7 @@ if (! function_exists('response')) {
             return $factory;
         }
 
-        return $factory->make($content, $status, $headers);
+        return $factory->make($content, (array)$status, $headers);
     }
 }
 
@@ -995,7 +995,7 @@ if (! function_exists('validator')) {
             return $factory;
         }
 
-        return $factory->make($data, $rules, $messages, $attributes);
+        return $factory->make((string)$data, $rules, $messages, $attributes);
     }
 }
 

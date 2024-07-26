@@ -40,7 +40,7 @@ trait SupportsDefaultModels
      * Get the default value for this relation.
      *
      * @param  \Illuminate\Database\Eloquent\Model  $parent
-     * @return \Illuminate\Database\Eloquent\Model|null
+     * @return Model|void|null
      */
     protected function getDefaultFor(Model $parent)
     {

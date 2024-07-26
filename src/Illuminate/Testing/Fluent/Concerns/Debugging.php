@@ -2,6 +2,8 @@
 
 namespace Illuminate\Testing\Fluent\Concerns;
 
+use JetBrains\PhpStorm\NoReturn;
+
 trait Debugging
 {
     /**
@@ -23,7 +25,7 @@ trait Debugging
      * @param  string|null  $prop
      * @return never
      */
-    public function dd(string $prop = null): void
+    #[NoReturn] public function dd(string $prop = null): void
     {
         dd($this->prop($prop));
     }

@@ -428,27 +428,18 @@ class Migrator
      */
     protected function pretendToRun($migration, $method)
     {
-        try {
-            $name = get_class($migration);
+        $name = get_class($migration);
 
-            $reflectionClass = new ReflectionClass($migration);
+        $reflectionClass = new ReflectionClass($migration);
 
-            if ($reflectionClass->isAnonymous()) {
+        if ($reflectionClass->isAnonymous()) {
                 $name = $this->getMigrationName($reflectionClass->getFileName());
             }
 
-            $this->write(TwoColumnDetail::class, $name);
-            $this->write(BulletList::class, collect($this->getQueries($migration, $method))->map(function ($query) {
+        $this->write(TwoColumnDetail::class, $name);
+        $this->write(BulletList::class, collect($this->getQueries($migration, $method))->map(function ($query) {
                 return $query['query'];
-            }));
-        } catch (SchemaException) {
-            $name = get_class($migration);
 
-            $this->write(Error::class, sprintf(
-                '[%s] failed to dump queries. This may be due to changing database columns using Doctrine, which is not supported while pretending to run migrations.',
-                $name,
-            ));
-        }
     }
 
     /**
@@ -655,7 +646,7 @@ class Migrator
      * Resolve the database connection instance.
      *
      * @param  string  $connection
-     * @return \Illuminate\Database\Connection
+     * @return \Illuminate\Database\Connection|\Illuminate\Database\ConnectionInterface
      */
     public function resolveConnection($connection)
     {

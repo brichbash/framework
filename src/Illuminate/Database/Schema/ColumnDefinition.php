@@ -31,8 +31,22 @@ use Illuminate\Support\Fluent;
  * @method $this useCurrent() Set the TIMESTAMP column to use CURRENT_TIMESTAMP as default value
  * @method $this useCurrentOnUpdate() Set the TIMESTAMP column to use CURRENT_TIMESTAMP when updating (MySQL)
  * @method $this virtualAs(string $expression) Create a virtual generated column (MySQL/PostgreSQL/SQLite)
+ * @property null $name
+ * @property null $name
+ * @property null $change
+ * @property null $name
+ * @property null $change
+ * @property null $change
+ * @property null $renameTo
+ * @property null $renameTo
  */
 class ColumnDefinition extends Fluent
 {
     //
+    /**
+     * @var null
+     */
+    public $name;
+    public null $change;
+    public null $renameTo;
 }

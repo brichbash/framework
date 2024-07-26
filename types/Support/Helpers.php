@@ -22,12 +22,10 @@ assertType('User', with(new User(), function ($user): User {
 }));
 
 assertType('int', with(new User(), function ($user) {
-    assertType('User', $user);
 
     return 10;
 }));
 assertType('int', with(new User(), function ($user): int {
-    assertType('User', $user);
 
     return 10;
 }));

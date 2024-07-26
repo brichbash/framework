@@ -152,7 +152,7 @@ class SendQueuedNotifications implements ShouldQueue
     /**
      * Determine the time at which the job should timeout.
      *
-     * @return \DateTime|null
+     * @return \DateTime|void|null
      */
     public function retryUntil()
     {
